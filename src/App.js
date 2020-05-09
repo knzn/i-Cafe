@@ -1,4 +1,6 @@
 import React from "react";
+import Container from "@material-ui/core/Container";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -12,20 +14,22 @@ import Community from "./community/pages/Community";
 
 const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/cafe" exact>
-          <Cafe />
-        </Route>
-        <Route path="/community" exact>
-          <Community />
-        </Route>
-        <Redirect to="/" />
-      </Switch>
-    </Router>
+    <Container maxWidth="xl">
+      <Router>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/cafe" exact>
+            <Cafe />
+          </Route>
+          <Route path="/community" exact>
+            <Community />
+          </Route>
+          <Redirect to="/" />
+        </Switch>
+      </Router>
+    </Container>
   );
 };
 
